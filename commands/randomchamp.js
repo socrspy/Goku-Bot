@@ -1,9 +1,9 @@
 const randomPuppy = require('random-puppy');
 
-module.exports.run = async (bot, message, args) => {
+//module.exports.run = async (bot, message, args) => {
 
     let reddit = [
-        "cat",
+        "cute cat",
         "kitten",
         "baby cat",
     ]
@@ -23,7 +23,9 @@ module.exports.run = async (bot, message, args) => {
 
 };
 
-module.exports.help = {
+//module.exports.help = {
     name: 'cat',
     aliases: ['cat']
 }
+
+//gottaworkonthis
