@@ -69,8 +69,8 @@ bot.on('message', message=>{
         msg.delete();
 
     }
-    
-    if(message.content.startsWith(`${prefix}delete`)) {
+
+    if(message.content.startsWith(`${PREFIX}delete`)) {
         const user = message.mentions.users.first();
         // Parse Amount
         const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2])
