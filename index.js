@@ -72,6 +72,25 @@ bot.on('message', message=>{
 
 })
 
+if(message.content.startsWith(`${prefix}delete`)) {
+    const user = message.mentions.users.first();
+    // Parse Amount
+    const amount = !!parseInt(message.content.split(' ')[1]) ? parseInt(message.content.split(' ')[1]) : parseInt(message.content.split(' ')[2])
+    //Check if it the amount for message to delete where declared
+    if (!amount) return message.reply('Must specify an amount to delete!').then(msg => msg.delete(15000));
+    // Fetch 100 messages (will be filtered and lowered up to max amount requested)
+    message.channel.fetchMessages({
+      limit: 100,
+    }).then((messages) => {
+        //I declare the messages like that with amount + 1 to delete the command itself
+        messages = messages.array().slice(0, amount + 1);
+        //And finally buldDelete deletes the desired amount
+        message.channel.bulkDelete(messages).then(messages => console.log(`Bulk deleted ${args[0]} messages`))
+          .catch(console.error);
+
+
+    })
+}
 
 
 
