@@ -3,7 +3,7 @@ const randomPuppy = require('random-puppy');
 module.exports.run = async (bot, message, args) => {
 
     let reddit = [
-        "thicc",
+        "cute animals",
     ]
 
     let subreddit = reddit[Math.floor(Math.random() * reddit.length)];
