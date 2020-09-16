@@ -38,22 +38,19 @@ bot.on('message', message=>{
 
     }
 
-    if (command === `${prefix}amongus`) {
+    switch(args[0]){
+        case 'amongus':
+            const amongus = new Discord.MessageEmbed()
+                .setTitle("Among Us")
+                .setDescription("Er word een Among Us game gehost")
+                .setColor("#c70039")
+                .addField(args[1])
+                .setImage("https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=nl")
+                .setFooter(message.author.username)
+                .setTimestamp
+        message.channel.send(amongus);
+        break;
 
-        let args = message.content.slice(PREFIX.length).split(' ');
-
-        switch (args[0]) {
-            case 'embed':
-            const embed = new Discord.MessageEmbed() 
-            .setTitle("Among Us")
-            .setDescription("Er word een Among Us game gehost")
-            .setColor("#C70039")
-            .addField(args[1])
-            .setFooter(message.author.username)
-            .setTimestamp()
-
-        return message.channel.send(embed);
-        }
     }
 
     if (message.content.includes('kanker')) {
