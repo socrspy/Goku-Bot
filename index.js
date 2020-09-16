@@ -44,7 +44,7 @@ bot.on('message', message=>{
                 .setTitle("Among Us")
                 .setDescription("Er word een Among Us game gehost")
                 .setColor("#c70039")
-                .addField({name: args[1].toUpperCase() , value: args[2]})
+                .addField(args[1].toUpperCase() , args[2])
                 .setImage("https://image.winudf.com/v2/image1/Y29tLmlubmVyc2xvdGguc3BhY2VtYWZpYV9pY29uXzE1NTQ5MzY1NjJfMDEz/icon.png?w=170&fakeurl=1")
                 .setFooter(message.author.username)
                 .setTimestamp()
