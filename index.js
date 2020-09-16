@@ -43,9 +43,11 @@ bot.on('message', message=>{
             const amongus = new Discord.MessageEmbed()
                 .setTitle("Among Us")
                 .setDescription("Er word een Among Us game gehost")
+                .setAuthor(message.author.avatar)
                 .setColor("#c70039")
-                .addField(args[1])
-                .setImage("https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=nl")
+                .addField(args[1].toUpperCase)
+                .setURL()
+                .setImage("https://image.winudf.com/v2/image1/Y29tLmlubmVyc2xvdGguc3BhY2VtYWZpYV9pY29uXzE1NTQ5MzY1NjJfMDEz/icon.png?w=170&fakeurl=1")
                 .setFooter(message.author.username)
                 .setTimestamp()
         message.channel.send(amongus);
