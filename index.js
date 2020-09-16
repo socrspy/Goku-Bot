@@ -47,7 +47,7 @@ bot.on('message', message=>{
                 .addField(args[1])
                 .setImage("https://play.google.com/store/apps/details?id=com.innersloth.spacemafia&hl=nl")
                 .setFooter(message.author.username)
-                .setTimestamp
+                .setTimestamp()
         message.channel.send(amongus);
         break;
 
