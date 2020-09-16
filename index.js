@@ -38,7 +38,23 @@ bot.on('message', message=>{
 
     }
 
-    
+    if (command === `${prefix}amongus`) {
+
+        let args = message.content.slice(PREFIX.length).split(' ');
+
+        switch (args[0]) {
+            case 'embed':
+            const embed = new Discord.MessageEmbed() 
+            .setTitle("Among Us")
+            .setDescription("Er word een Among Us game gehost")
+            .setColor("#C70039")
+            .addField(args[1])
+            .setFooter(message.author.username)
+            .setTimestamp()
+
+        return message.channel.send(embed);
+        }
+    }
 
     if (message.content.includes('kanker')) {
 
