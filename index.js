@@ -59,6 +59,7 @@ bot.on('message', message=>{
             let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
             for (const [memberID, member] of channel.members) {
               member.voice.setMute(true);
+              message.channel.send('Everyone is muted ssshhtt!')
             }
           } 
 
@@ -67,6 +68,7 @@ bot.on('message', message=>{
                 let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
                 for (const [memberID, member] of channel.members) {
                   member.voice.setMute(false);
+                  message.channel.send('Time to discuss! Who is the imposter?')
                 }
               } 
 
