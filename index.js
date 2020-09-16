@@ -25,6 +25,7 @@ bot.on('guildMemberAdd', member =>{
 
 });
 
+
 bot.on('message', message=>{
     
     let args = message.content.substring(PREFIX.length).split(" ");
@@ -52,6 +53,14 @@ bot.on('message', message=>{
         break;
 
     }
+
+    if (message.content === 'MuteUs') {
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Imposters have no permission");
+        let channel = message.member.voiceChannel;
+        for (let member of channel.members) {
+            member[1].setMute(true)
+        }
+     }
 
     if (message.content.includes('kanker')) {
 
