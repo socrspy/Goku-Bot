@@ -54,6 +54,22 @@ bot.on('message', message=>{
 
     }
 
+    if (message.content.includes('MuteUs')) {
+        if(!message.member.voice.channel) return  message.reply('You need to join a voice channel first!');
+            let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
+            for (const [memberID, member] of channel.members) {
+              member.voice.setMute(true);
+            }
+          } 
+
+    if (message.content.includes('Unmute')) {
+            if(!message.member.voice.channel) return  message.reply('You need to join a voice channel first!');
+                let channel = message.guild.channels.cache.get(message.member.voice.channel.id);
+                for (const [memberID, member] of channel.members) {
+                  member.voice.setMute(false);
+                }
+              } 
+
 
     if (message.content.includes('kanker')) {
 
