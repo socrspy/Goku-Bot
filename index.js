@@ -55,7 +55,6 @@ bot.on('message', message=>{
     }
 
     if (message.content === 'MuteUs') {
-        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Imposters have no permission");
         let channel = message.member.voiceChannel;
         for (let member of channel.members) {
             member[1].setMute(true)
