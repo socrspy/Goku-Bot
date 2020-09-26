@@ -78,6 +78,14 @@ bot.on('message', message=>{
 
 
     }
+
+    if (message.content.includes('homo')) {
+
+        message.delete();
+        message.author.send('Sorry dit woord is blacklisted op deze server! Geen racistische, homofobische of seksistische uitspraken/slangs op deze server.')
+
+
+    }
     
     if (message.content.includes('!dog')) {
         (async() => {
